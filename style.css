@@ -1,0 +1,26 @@
+table{
+	border-collapse: collapse;
+}
+td{
+		width:20px;
+		height: 20px;
+		border: 1px solid black;
+}
+td.moveable{
+	background-color: cyan;
+	cursor: pointer;
+}
+h1{
+	color: red;
+}
+div#current_user{
+	cursor: pointer;
+}
+
+div.player{
+	background-color: yellow;
+	border: 1px solid black;
+	height: 18px;
+	width: 18px;
+	cursor: not-allowed;
+}
