@@ -1,9 +1,9 @@
 <?php
 
-	$url_parts = explode('://', $_SERVER['SCRIPT_URI']);
-	if ($url_parts[0] != 'https'){
-		header('Location: https://'.$url_parts[1]);
-	}
+	//$url_parts = explode('://', $_SERVER['SCRIPT_URI']);
+	//if ($url_parts[0] != 'https'){
+		//header('Location: https://'.$url_parts[1]);
+	//}
 	
 	session_start();
 	
