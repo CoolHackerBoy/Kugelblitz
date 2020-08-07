@@ -28,3 +28,4 @@
 	else{
 		include('login.php');
 	}
+?>	
