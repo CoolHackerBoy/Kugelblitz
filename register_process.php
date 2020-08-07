@@ -40,7 +40,7 @@
 	}
 	
 	function getAllPlayers(){
-		include('../../db_con.php');
+		include('../db_con.php');
 		
 		$db_con = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 		

@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	require_once('show_php_errors.php');
-	require_once('db_con.php');
+	require_once('../db_con.php');
 
 	$db_con = mysqli_connect($db_host, $db_user, $db_pass, 'cc4k__hackerboy');
 
