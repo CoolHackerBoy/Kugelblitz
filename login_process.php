@@ -6,7 +6,7 @@
 
 	 if (!empty($_POST) ){
 		
-		 $db_con = mysqli_connect($db_host, $db_user, $db_pass, 'cc4k__hackerboy');
+		 $db_con = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 		 
 		 $username = $_POST['username'];
 		 $pw_hash = hash('sha512', $_POST['password']);
