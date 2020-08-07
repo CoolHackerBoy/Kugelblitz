@@ -20,7 +20,7 @@
 		include('Color_Picker.php');
 		include('playing_field.php');
 		include('js_vars.php');
-		echo '<script src = "https://cc4k.co/jquery.js"></script>';
+		echo '<script src = "jquery.js"></script>';
 		echo '<script src = "script.js"></script>';
 		
 		
