@@ -2,7 +2,7 @@
 	session_start();
 	require_once('show_php_errors.php');
 
-	require_once('../db_con.php');
+	require_once('db_con.php');
 	
 	function is_username_valid( $username, $db_con ){
 		
