@@ -10,6 +10,10 @@ td.moveable{
 	background-color: cyan;
 	cursor: pointer;
 }
+td.attackable{
+	background-color: cyan;
+	cursor: pointer;
+}
 h1{
 	color: red;
 }

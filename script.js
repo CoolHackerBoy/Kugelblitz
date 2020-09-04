@@ -4,6 +4,12 @@ function makeCellTargetableIfEmpty(newTr, newTd){
 	}
 }
 
+function makeCellWithEnemyAttackableIf(newTr, newTd){
+	if( $('tr:nth-child('+(newTr)+') td:nth-child('+(newTd)+')').children().length == 0){
+		$('tr:nth-child('+(newTr)+') td:nth-child('+(newTd)+')').addClass('attackable');
+	}
+}
+
 $(document).on('click','#current_user',function(){
 	var trPosition = $(this).parent().parent().index();
 	var tdPosition = $(this).parent().index()
@@ -16,10 +22,10 @@ $(document).on('click','#current_user',function(){
 	makeCellTargetableIfEmpty(trPosition+1, tdPosition+0);
 	
 	//diangle
-	//$('tr:nth-child('+(trPosition)+') td:nth-child('+(tdPosition)+')').css('background-color','red');
-	//$('tr:nth-child('+(trPosition)+') td:nth-child('+(tdPosition+2)+')').css('background-color','red');
-	//$('tr:nth-child('+(trPosition+2)+') td:nth-child('+(tdPosition)+')').css('ba	ckground-color','red');
-	//$('tr:nth-child('+(trPosition+2)+') td:nth-child('+(tdPosition+2)+')').css('background-color','red');
+	makeCellTargetableIfEmpty(trPosition+0, tdPosition+0);
+	makeCellTargetableIfEmpty(trPosition+0, tdPosition+2);
+	makeCellTargetableIfEmpty(trPosition+2, tdPosition+0);
+	makeCellTargetableIfEmpty(trPosition+2, tdPosition+2);
 });
 
 $(document).on('click','.moveable',function(){
@@ -41,8 +47,8 @@ $(document).on('click','.moveable',function(){
 	
 });
 	
-$(document).on('click','div.player:not(#current_user)', function(){
-	alert("not allowed")
-});
+//$(document).on('click','div.player:not(#current_user)', function(){
+	//alert("not allowed")
+//});
 
 
