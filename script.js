@@ -45,4 +45,12 @@ $(document).on('click','div.player:not(#current_user)', function(){
 	alert("not allowed")
 });
 
+var reloadSpeed = setInterval(function(){
+	$.post("playing_field.php", {user: username, set: 'y'}, function(data){
+		$('body').append(data)
+		console.log(data)
+	})
+	$('table').remove()
+}, 10000)
+
 

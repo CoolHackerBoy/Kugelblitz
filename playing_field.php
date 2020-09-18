@@ -1,7 +1,11 @@
 <?php
 require_once('show_php_errors.php');
 require_once('../db_con.php');
-
+	
+	if(!isset($_SESSION)){
+		session_start(); 
+	}
+	
 	function getAllPlayers(){
 		include('../db_con.php');
 		
