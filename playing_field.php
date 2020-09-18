@@ -1,10 +1,19 @@
 <?php
-require_once('show_php_errors.php');
-require_once('../db_con.php');
+	require_once('show_php_errors.php');
+	require_once('../db_con.php');
 	
 	if(!isset($_SESSION)){
 		session_start(); 
 	}
+	
+	function rollTurn(){
+		$roll = rand(1,100);
+		$db_con = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+		$select_stmt = 'UPDATE `kb_users` SET `roll`='.$roll.' WHERE `username`=`'.$_SESSION['username'].'`';
+		mysqli_query($db_con, $stmt);
+	}
+	
+	rollTurn();
 	
 	function getAllPlayers(){
 		include('../db_con.php');
