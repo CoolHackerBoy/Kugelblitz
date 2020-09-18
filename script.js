@@ -4,29 +4,42 @@ function makeCellTargetableIfEmpty(newTr, newTd){
 	}
 }
 
-function makeCellWithEnemyAttackableIf(newTr, newTd){
+function makeCellWithEnemyAttackable(newTr, newTd){
 	if( $('tr:nth-child('+(newTr)+') td:nth-child('+(newTd)+')').children().length == 0){
 		$('tr:nth-child('+(newTr)+') td:nth-child('+(newTd)+')').addClass('attackable');
 	}
 }
 
+function playerTurnsRed(){
+	if (true){
+		$('div.player').css('background-color','red');
+	}
+}
+playerTurnsRed();
 $(document).on('click','#current_user',function(){
 	var trPosition = $(this).parent().parent().index();
 	var tdPosition = $(this).parent().index()
 	
 	//plus
-	
 	makeCellTargetableIfEmpty(trPosition+0, tdPosition+1);
 	makeCellTargetableIfEmpty(trPosition+1, tdPosition+2);
 	makeCellTargetableIfEmpty(trPosition+2, tdPosition+1);
 	makeCellTargetableIfEmpty(trPosition+1, tdPosition+0);
 	
 	//diangle
-	makeCellTargetableIfEmpty(trPosition+0, tdPosition+0);
-	makeCellTargetableIfEmpty(trPosition+0, tdPosition+2);
-	makeCellTargetableIfEmpty(trPosition+2, tdPosition+0);
-	makeCellTargetableIfEmpty(trPosition+2, tdPosition+2);
+	
 });
+
+$(document).on('click','#attackable',function(){
+	var trPosition = $(this).parent().parent().index();
+	var tdPosition = $(this).parent().index()
+	
+	makeCellWithEnemyAttackable(trPosition+0, tdPosition+0);
+	makeCellWithEnemyAttackable(trPosition+0, tdPosition+2);
+	makeCellWithEnemyAttackable(trPosition+2, tdPosition+0);
+	makeCellWithEnemyAttackabl(trPosition+2, tdPosition+2);
+	makeCellWithEnemyAttackable(trPosition+2, tdPosition+2);
+})
 
 $(document).on('click','.moveable',function(){
 	

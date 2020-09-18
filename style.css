@@ -11,7 +11,7 @@ td.moveable{
 	cursor: pointer;
 }
 td.attackable{
-	background-color: cyan;
+	background-color: red;
 	cursor: pointer;
 }
 h1{
@@ -26,5 +26,4 @@ div.player{
 	border: 1px solid black;
 	height: 18px;
 	width: 18px;
-	cursor: not-allowed;
 }
