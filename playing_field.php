@@ -8,9 +8,9 @@
 	
 	function rollTurn(){
 		include('../db_con.php');
-		$roll = rand(1,100);
+		$roll = rand(1,1000)/10;
 		$db_con = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
-		$stmt = 'UPDATE `kb_users` SET `roll`='.$roll.' WHERE `username`=`'.$_SESSION['username'].'`';
+		$stmt = 'UPDATE kb_users SET roll='.$roll.' WHERE username="'.$_SESSION['username'].'"';
 		if(mysqli_query($db_con, $stmt)){
 			echo 'yes';
 		}
