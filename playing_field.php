@@ -14,9 +14,6 @@
 		if(mysqli_query($db_con, $stmt)){
 			echo 'yes';
 		}
-		setTimeout(function(){
-			
-		}, )
 	}
 	
 	rollTurn();
